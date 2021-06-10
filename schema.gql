@@ -3,24 +3,26 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
-input CatInput {
+input EmployeesInput {
   name: String!
+  surname: String!
   age: Int!
-  breed: String!
+  department: String!
 }
 
-type CatType {
+type EmployeesType {
   id: ID!
   name: String!
+  surname: String!
   age: Int!
-  breed: String!
+  department: String!
 }
 
 type Mutation {
-  createCat(input: CatInput!): CatType!
+  createEmployees(input: EmployeesInput!): EmployeesType!
 }
 
 type Query {
   hello: String!
-  cats: [CatType!]!
+  employees: [EmployeesType!]!
 }
